@@ -42,7 +42,7 @@ locals {
 
 module "kms" {
   for_each   = { for k in local.kms_keyrings : k.key => k }
-  source = "git@github.com:Sofiane-Truman/fast-modules.git//kms?ref=main"
+  source = "git@github.com-renauto:Sofiane-Truman/fast-modules.git//kms?ref=main"
   project_id = module.project[each.value.environment].project_id
   keyring = {
     location = each.value.location
