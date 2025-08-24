@@ -1,5 +1,5 @@
 folder_ids = {
-  security = "827501587673"
+  security = "folders/827501587673"
 }
 
 environments = {
