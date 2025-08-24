@@ -29,7 +29,7 @@ locals {
 }
 
 module "cas" {
-  source                = "../../../modules/certificate-authority-service"
+  source = "git@github.com:Sofiane-Truman/fast-modules.git//certificate-authority-service?ref=main"
   for_each              = { for k in local.cas : k.key => k }
   project_id            = module.project[each.value.environment].project_id
   ca_configs            = each.value.ca_configs

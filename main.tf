@@ -37,7 +37,7 @@ locals {
 }
 
 module "folder" {
-  source        = "../../../modules/folder"
+  source = "git@github.com:Sofiane-Truman/fast-modules.git//folder?ref=main"
   folder_create = false
   id            = var.folder_ids.security
   contacts = (
@@ -48,7 +48,7 @@ module "folder" {
 }
 
 module "project" {
-  source   = "../../../modules/project"
+  source = "git@github.com:Sofiane-Truman/fast-modules.git//project?ref=main"
   for_each = var.environments
   name     = "${each.value.short_name}-sec-core-0"
   parent = coalesce(
