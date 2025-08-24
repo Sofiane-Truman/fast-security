@@ -7,5 +7,6 @@ environments = {
         name        = "Production"
         short_name  = "prod"
         is_default = true
+        tag_name = "production"
     }
 }
